@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.card {
+    width: 25rem;
+    height: 15rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    -webkit-box-shadow: outset 0px 5px 15px cyan;
+    -moz-box-shadow: outset 0px 5px 15px cyan;
+    box-shadow: outset 0px 5px 15px cyan;
+    /*display: inline;*/
+    position: relative;
+}
+
+.scroll{
+    height: 5rem;
+    width: 100%;
+    display: block;
+}
+
+.BT_SEND{
+    /* Rectangle 2: */
+    height: 5rem;
+    width: 5rem;
+    background-;
+
+    box-shadow: 0 14px 20px 0 rgba(0,0,0,0.35);
+}
