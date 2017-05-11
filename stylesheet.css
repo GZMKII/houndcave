@@ -59,6 +59,17 @@ body {
     line-height: 21px;
 }
 
+a:link {
+    /* 2017.1 - 2017.4 copy: */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:100;
+    font-size: 14px;
+    color: #FF7B00;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-decoration: none;
+}
+
 p {
     /* 以用户留存和满意度为目标，完成了包括键盘: */
     font-family: Arial, Helvetica, sans-serif;
