@@ -1,15 +1,153 @@
 * {
     padding: 0;
-    margin: 0;
-    background-color: #000000;
+    margin: 0 ;
+    box-sizing: inherit;
+    font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
-div {
-    display: flex;
-}
+/*div {*/
+    /*display: flex;*/
+/*}*/
 
 body {
-    margin: 5rem auto;
+    background-color: #141414;
+}
+
+.shell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 0 0 0 78px;
+    overflow: hidden;
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+.main {
+    position: relative;
+    z-index: 20;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 80px 0;
+    /*background-color: aqua;*/
+    width: calc(100% - 80px);
+}
+
+.view_home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crosses {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.cross-row {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cross:first-child {
+    left: 0;
+}
+
+.cross:nth-child(2){
+    left: 16.66%;
+}
+
+.cross:nth-child(3){
+    left: 33.33%;
+}
+
+.cross:nth-child(4){
+    left: 50%;
+}
+
+.cross:nth-child(5){
+    left: 66.66%;
+}
+
+.cross:nth-child(6){
+    left: 83.33%;
+}
+
+.cross {
+    width: 11px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.cross:before { /*垂直*/
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+}
+
+.cross:after { /*水平*/
+    left: 0;
+    top: 36%;
+    height: 1px;
+    width: 100%;
+}
+
+
+.cross:after, .cross:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .about-content-holder {
@@ -25,7 +163,6 @@ body {
     width: 8rem;
     /* 项目经历: */
     opacity: 0.87;
-    font-family: Lato-Light;
     font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -42,7 +179,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     /* 触宝输入法产品Festure设计(And: */
-    font-family: .PingFangSC-Regular, Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
@@ -59,16 +195,16 @@ body {
     line-height: 21px;
 }
 
-a:link {
-    /* 2017.1 - 2017.4 copy: */
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:100;
-    font-size: 14px;
-    color: #FF7B00;
-    letter-spacing: 0;
-    line-height: 21px;
-    text-decoration: none;
-}
+/*a:link {*/
+    /*/* 2017.1 - 2017.4 copy: */
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-weight:100;*/
+    /*font-size: 14px;*/
+    /*color: #FF7B00;*/
+    /*letter-spacing: 0;*/
+    /*line-height: 21px;*/
+    /*text-decoration: none;*/
+/*}*/
 
 p {
     /* 以用户留存和满意度为目标，完成了包括键盘: */
@@ -81,4 +217,123 @@ p {
     margin-top: 0.2rem;
     margin-bottom: 3rem;
     max-width: 600px;
+}
+
+.lines{
+    position: absolute;
+    top: 0;
+    /*left: 80px;*/
+    height: 100%;
+    width: calc(100% - 80px);
+    z-index: 0;
+    justify-content: center;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+    max-width: 1440px;
+    /*margin: 0 auto;*/
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    opacity: .06;
+}
+
+.line:first-child {
+    left: 0;
+}
+
+.line:nth-child(2) {
+    left: 16.66%;
+}
+
+.line:nth-child(3) {
+    left: 33.33%;
+}
+
+.line:nth-child(4) {
+    left: 50%;
+}
+
+.line:nth-child(5) {
+    left: 66.66%;
+}
+
+.line:nth-child(6) {
+    left: 83.33%;
+}
+
+
+.Name{
+    position: relative;
+    z-index: 2;
+    top: 1%;
+    font-weight: bolder;
+}
+
+.Name-Site{
+    color: #fff;
+    font-size: 110px;
+    display: flex;
+    position: relative;
+    left: -7px;
+}
+
+.about{
+    position: relative;
+    display: block;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.desc{
+    /* UX Designer Front En: */
+    opacity: 0.54;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: 100;
+}
+
+.title{
+    /* Liangkai Zhou: */
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: 200;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.btn{
+    display: inline-flex;
+    border: 1px solid;
+    padding: 10px 24px;
+    border-color: #FF7B00;
+    font-weight:200;
+    font-size: 14px;
+    color: #FF7B00;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 4px 0 #fff, 0 0 4px #fff inset;
+    border-color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
