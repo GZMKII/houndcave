@@ -5,12 +5,66 @@
     font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
+@font-face {
+    font-family: Lato-Regular;
+    src: url('src/font/LatoLatin-Regular.woff2');
+}
+
+@font-face {
+    font-family: Lato-Medium;
+    src: url('src/font/LatoLatin-Medium.woff2')
+}
+
+@keyframes chipsFadein {
+    0% {
+        top: 50%;
+        opacity:0;
+    }
+
+    3%{
+        opacity: 0.2;
+    }
+
+    6%{
+        opacity: 0.1;;
+    }
+
+    15%{
+        opacity: 0.5;;
+    }
+
+    20%{
+        opacity: 0.2;
+    }
+
+    25%{
+        opacity: 0.5;
+    }
+
+    30%{
+        opacity: 0.2;
+    }
+
+    70%{
+        top:50%;
+        opacity:1;
+    }
+
+    100% {
+        top: 40%;
+        opacity:1;
+    }
+}
+
 /*div {*/
     /*display: flex;*/
 /*}*/
 
 body {
     background-color: #141414;
+    position: absolute;
+    height:100%;
+    width:100%;
 }
 
 .shell {
@@ -214,9 +268,6 @@ p {
     line-height: 20px;
     color: #FFFFFF;
     letter-spacing: 0;
-    margin-top: 0.2rem;
-    margin-bottom: 3rem;
-    max-width: 600px;
 }
 
 .lines{
@@ -337,3 +388,84 @@ p {
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
+
+.view_chips{
+    margin-left: 33.3%;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width:100%;
+}
+
+.chips{
+    position: relative;
+    width: 16.6%;
+    height:40%;
+    top: 40%;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    display: inline-block;
+    -webkit-animation: chipsFadein 1.6s ;
+    -o-animation: chipsFadein 1.6s ;
+    animation: chipsFadein 1.6s ;
+}
+
+.chips .chips_bg{
+    height:100%;
+    width: 100%;
+    background: url(src/img/theme.png);
+    background-clip: border-box;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.chips:hover .chips_bg{ /*当chips为hover状态时,改变chips的状态*/
+    height:100%;
+    width: 100%;
+    background: url(src/img/theme.png);
+    background-clip: padding-box;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.chip_title{
+    position: absolute;
+    bottom: 52px;
+    left:12px;
+    font-family: Lato-Medium;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.chip_type{
+    position: absolute;
+    bottom: 9px;
+    left: 12px;
+    font-family: Lato-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+
+.divider{
+    /* Rectangle 6: */
+    position: absolute;
+    bottom:38px;
+    background: #FC7B00;
+    height:2px;
+    width: 36px;
+}
+
