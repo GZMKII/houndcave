@@ -401,6 +401,7 @@ p {
     position: relative;
     width: 16.6%;
     height:40%;
+    box-sizing: border-box;
     top: 40%;
     border: 1px solid rgba(255, 255, 255, 0.13);
     display: inline-block;
@@ -410,12 +411,11 @@ p {
 }
 
 .chips .chips_bg{
-    height:100%;
     width: 100%;
-    background: url(src/img/theme.png);
-    background-clip: border-box;
-    background-position: center;
+    height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0.2;
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
@@ -424,12 +424,10 @@ p {
     transition: all 0.8s;
 }
 
-.chips:hover .chips_bg{ /*当chips为hover状态时,改变chips的状态*/
-    height:100%;
+.chips:hover .chips_bg{ /*当chips为hover状态时,改变chips_bg的状态*/
+    background-size: cover;
     width: 100%;
-    background: url(src/img/theme.png);
-    background-clip: padding-box;
-    background-position: center;
+    height: 100%;
     background-size: cover;
     opacity: 1;
     -webkit-transition: all 0.2s;

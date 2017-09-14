@@ -17,20 +17,32 @@
 //     $("div.view_chips").append('<div class="chips"></div>')
 //     }
 // })
+'use strict';
 
-function createChip(config,$container){
+function createChip(config, $container){
     var chip = {
         config: config,
         render: function render () {
-            var self = this;
 
-            var $card = $('<div class="chip"><img class="chips_bg" src="' + this.config.bgUrl + '"><p class="title">' + this.config.title + '</p><p class="tag">' + this.config.tag + '</p><div class="divider"></div></div></div>')
+            var self = this;
+            var $card = $('<div class="chips"><div class="chips_bg"></div><p class="chip_title">' + this.config.title + '</p><p class="chip_type">' + this.config.tag + '</p><div class="divider"></div></div></div>');
             $card.bind('click',function(){
-                alert('load article: ' + self.config.title );
+                alert('load article: ' + self.config.title);
+            });
+            $card.find('.chips_bg').css({
+                "background-image": 'url("' + self.config.bgUrl + '")'
             });
             $container.append($card);
 
+
         }
-    }
+    };
     return chip;
-};
+}
+$(function ( ) {
+    var $container = $('.view_chips');
+    data.forEach(function(item){
+        var card = createChip(item,$container);
+        card.render();
+    });
+});
