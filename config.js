@@ -19,7 +19,13 @@ function createChip(posY,config, $container){
                 $('.content').append($content)
                 $('.main').css({
                     "animation":"mainView_fadeOut 0.4s forwards ",
-                })
+                });
+                setTimeout(function(){
+                   // $('.main').classList.add('stop')
+                    $('.chips_bg').css({
+                        "animation-play-state": "paused"
+                    })
+                },400)
             });
             $card.css({
                 top: this.posY * 20 + '%',
@@ -69,6 +75,6 @@ $(function ( ) {
 
         $('.main').css({
             "animation":"mainView_fadeIn 0.4s forwards"
-        })
+        }).classList.remove('stop')
     })
 });

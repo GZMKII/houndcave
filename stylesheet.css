@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0 ;
     box-sizing: inherit;
-    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-family: Lato, "PingFang SC", Arial, Helvetica, sans-serif;
 }
 
 @font-face {
@@ -13,6 +13,16 @@
 @font-face {
     font-family: Lato-Medium;
     src: url('src/font/LatoLatin-Medium.woff2')
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('src/font/LatoLatin-Light.woff2')
+}
+
+@font-face {
+    font-family: Lato-Thin;
+    src: url('./src/font/LatoLatin-Thin.woff2')
 }
 
 @keyframes chipsFadein {
@@ -94,7 +104,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes detailView_fadeOut {
     0%{
         opacity: 1;
@@ -107,6 +116,7 @@
     }
 
 }
+
 
 body {
     background-color: #141414;
@@ -301,18 +311,18 @@ body {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-tag {
+.tag {
     /* #Back End Copy: */
+    font-weight: 500;
     opacity: 0.4;
-    font-family: Lato-Medium;
     font-size: 14px;
     color: #FFFFFF;
+
 }
 
 h1 {
     /* TochPal Operation Pl: */
-    font-family: Lato-Thin;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 86px;
     line-height: 120px;
     color: #FFFFFF;
@@ -320,15 +330,14 @@ h1 {
 
 h2 {
     /* 项目总结: */
-    font-family: PingFangSC-Medium;
     font-size: 22px;
     color: #FFFFFF;
-    letter-spacing: -0.37px;
+    font-weight: 300;
+    line-height: 2;
 }
 
 p {
     /* 以用户留存和满意度为目标，完成了包括键盘: */
-    font-family: Lato-Thin, PingFangSC-Light, Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -336,15 +345,19 @@ p {
     letter-spacing: 0;
 }
 
-.detail-p {
+.content p {
     /* 我设计并且迭代了触宝运营平台（简称TOP: */
     font-size: 14px;
-    color: #FFFFFF;
-    line-height: 20px;
+    line-height: 1.4;
+    margin-top: 16px;
+}
+
+.content img{
+    width: 83.333%
 }
 
 .section {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .two {
@@ -354,8 +367,6 @@ p {
     box-sizing: border-box;
     padding-right: 16.666%;
 }
-
-
 
 .lines{
     position: absolute;
@@ -413,7 +424,6 @@ p {
     position: relative;
     z-index: -1;
     top: 1%;
-    font-weight: bolder;
     width: 50%;
 }
 
@@ -422,6 +432,7 @@ p {
     font-size: 110px;
     position: relative;
     line-height: 110px;
+    font-weight: 700;
 }
 
 .about{
@@ -487,11 +498,11 @@ p {
     margin-left: 33.3%;
     position: absolute;
     height: 100%;
-    width: 66.6%;
+    width: 66.78%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 
 .chips{
@@ -540,21 +551,18 @@ p {
     position: absolute;
     bottom: 52px;
     left:12px;
-    font-family: Lato-Medium;
     font-size: 18px;
-    color: #FFFFFF;
-    letter-spacing: 0;
+    font-weight: 400;
+
 }
 
 .chip_type{
     position: absolute;
     bottom: 9px;
     left: 12px;
-    font-family: Lato-Regular;
     font-size: 12px;
-    color: #FFFFFF;
-    letter-spacing: 0;
     line-height: 21px;
+    font-weight: 300;
 }
 
 .divider{
@@ -566,5 +574,7 @@ p {
     width: 36px;
 }
 
-
+.stop{
+    animation-play-state: paused;
+}
 
