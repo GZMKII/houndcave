@@ -1,48 +1,74 @@
 /**
  * Created by GZMKII on 2017/7/22.
  */
-// function chipsBuilder (){
-//     // for(i=0,i<5,i++){
-//         var chips=document.createElement("div");
-//         var node=document.createTextNode("somehting");
-//         chips.appendChild(node);
-//
-//         var element=document.getElementById("view_chips");
-//         element.appendChild(chips);
-// }
-//
-
-// $(function(){
-//     for( var i=0; i<7; i++){
-//     $("div.view_chips").append('<div class="chips"></div>')
-//     }
-// })
 'use strict';
 
-function createChip(config, $container){
+function createChip(posY,config, $container){
     var chip = {
+        posY: posY,
         config: config,
         render: function render () {
-
             var self = this;
+            var $content = $(this.config.content);
             var $card = $('<div class="chips"><div class="chips_bg"></div><p class="chip_title">' + this.config.title + '</p><p class="chip_type">' + this.config.tag + '</p><div class="divider"></div></div></div>');
             $card.bind('click',function(){
-                alert('load article: ' + self.config.title);
+                $('.view_detail').css({
+                    "display": "block",
+                    "animation": "detailView_fadeIn 0.4s forwards"
+                });
+                $('.content').append($content)
+                $('.main').css({
+                    "animation":"mainView_fadeOut 0.4s forwards ",
+                })
             });
+            $card.css({
+                top: this.posY * 20 + '%',
+                opacity: 0
+            });
+
             $card.find('.chips_bg').css({
                 "background-image": 'url("' + self.config.bgUrl + '")'
             });
+
+
             $container.append($card);
 
+            var time = Math.random() * 300 | 0;
 
+            setTimeout(function () {
+                $card.css({
+                    opacity:1,
+                    "animation": "chipsFadein 1.6s"
+                })
+            },time);
         }
     };
     return chip;
 }
+
 $(function ( ) {
     var $container = $('.view_chips');
-    data.forEach(function(item){
-        var card = createChip(item,$container);
+
+    data.forEach(function(item, index){
+        var posY = index % 2 === 0;
+        var card = createChip(posY,item,$container);
+
         card.render();
     });
+    $('.close').click(function () {
+        $('.view_detail').css({
+            "animation": "detailView_fadeOut 0.4s forwards"
+        });
+
+        setTimeout(function(){
+            $('.content').empty();
+            $('.view_detail').css({
+                "display": "none",
+            });
+        },400);
+
+        $('.main').css({
+            "animation":"mainView_fadeIn 0.4s forwards"
+        })
+    })
 });
