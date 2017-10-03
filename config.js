@@ -3,6 +3,11 @@
  */
 'use strict';
 
+
+
+
+
+
 function createChip(posY,config, $container){
     var chip = {
         posY: posY,
@@ -16,7 +21,7 @@ function createChip(posY,config, $container){
                     "display": "block",
                     "animation": "detailView_fadeIn 0.4s forwards"
                 });
-                $('.content').append($content)
+                $('.content').append($content);
                 $('.main').css({
                     "animation":"mainView_fadeOut 0.4s forwards ",
                 });
@@ -53,6 +58,30 @@ function createChip(posY,config, $container){
 }
 
 $(function ( ) {
+
+    var length = resource.length;//获取resource的长度
+
+    resource.forEach(function(image){//遍历resource
+        var img = new Image();//创建img
+        img.src = image;  //将resource中内容加载到img对象内
+        img.onload = function(){
+            if(!--length){
+                $(".loading").remove();
+            }else{
+                setTimeout(function(){
+                    $(".loading").remove()
+                },1500)
+            }
+            // if(!--length){
+            //     setTimeout(function(){
+            //         $(".loading").remove()
+            //     },1500);
+            // }
+        };
+    });
+
+
+
     var $container = $('.view_chips');
 
     data.forEach(function(item, index){
@@ -61,6 +90,8 @@ $(function ( ) {
 
         card.render();
     });
+
+
     $('.close').click(function () {
         $('.view_detail').css({
             "animation": "detailView_fadeOut 0.4s forwards"

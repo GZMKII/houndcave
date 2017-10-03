@@ -1,0 +1,580 @@
+* {
+    padding: 0;
+    margin: 0 ;
+    box-sizing: inherit;
+    font-family: Lato, "PingFang SC", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url('src/font/LatoLatin-Regular.woff2');
+}
+
+@font-face {
+    font-family: Lato-Medium;
+    src: url('src/font/LatoLatin-Medium.woff2')
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('src/font/LatoLatin-Light.woff2')
+}
+
+@font-face {
+    font-family: Lato-Thin;
+    src: url('./src/font/LatoLatin-Thin.woff2')
+}
+
+@keyframes chipsFadein {
+    0% {
+        opacity:0;
+        transform: translate(5%,10%) skew(0deg,-5deg);
+    }
+
+    3%{
+        opacity: 0.2;
+    }
+
+    6%{
+        opacity: 0.1;;
+    }
+
+    15%{
+        opacity: 0.7;;
+    }
+
+    20%{
+        opacity: 0.1;
+    }
+
+    25%{
+        opacity: 0.5;
+    }
+
+    30%{
+        opacity: 0.2;
+        transform: translate(10%,10%) skew(0deg,-5deg)
+    }
+
+    70%{
+        opacity:1;
+        transform: translate(0,0)
+    }
+
+    100% {
+        opacity:1;
+
+    }
+}
+@keyframes mainView_fadeOut {
+    0%{
+        opacity:1;
+        transform: scale(1);
+        /*filter:blur(0px);*/
+    }
+
+    100%{
+        opacity: 0.08;
+        transform: scale(0.9);
+        /*filter:blur(5px);*/
+    }
+}
+@keyframes mainView_fadeIn {
+    0%{
+        opacity: 0.1;
+        transform: scale(0.9);
+        /*filter:blur(5px);*/
+    }
+
+    100%{
+        opacity:1;
+        transform: scale(1);
+        /*filter:blur(0px);*/
+    }
+
+}
+@keyframes detailView_fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes detailView_fadeOut {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+}
+
+
+body {
+    background-color: #141414;
+    position: absolute;
+    height:100%;
+    width:100%;
+}
+
+.shell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(100% - 120px);
+    overflow: hidden;
+    max-width: 1920px;
+    margin:0 auto;
+    padding: 0 60px;
+}
+
+.shell:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("./src/img/bg.jpg");
+    background-size: cover;
+    opacity: 0.24;
+}
+
+.view_detail{
+    display: none;
+    position: fixed;
+    width: calc(100% - 120px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    border-left: solid 1px rgba(255,255,255, 0.2);
+    border-right: solid 1px rgba(255,255,255, 0.2);
+}
+.close {
+    box-sizing: border-box;
+    padding: 40px;
+    position: fixed;
+    height:15%;
+    width: 15%;
+
+}
+.content{
+    padding-top: 5vh;
+    width: 83.3333%;
+    margin-left: 16.6666%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.main{
+    position: relative;
+    z-index: 10;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin:60px 0;
+    /*background-color: aqua;*/
+    width: 100%;
+    max-width: 1920px;
+}
+
+.view_home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crosses {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    height: calc(100% - 120px);
+    /*height: 100%;*/
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width:calc(100% - 120px);
+    max-width: 1920px;
+    margin: 60px 0;
+    /*-webkit-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
+}
+
+.cross-row {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    top: 2px;
+}
+
+.cross:first-child {
+    left: 0;
+}
+
+.cross:nth-child(2){
+    left: 16.66%;
+}
+
+.cross:nth-child(3){
+    left: 33.33%;
+}
+
+.cross:nth-child(4){
+    left: 50%;
+}
+
+.cross:nth-child(5){
+    left: 66.66%;
+}
+
+.cross:nth-child(6){
+    left: 83.33%;
+}
+
+.cross:nth-child(7){
+    left: 100%;
+}
+
+.cross {
+    width: 11px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.cross:before { /*垂直*/
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+}
+
+.cross:after { /*水平*/
+    left: 0;
+    top: 36%;
+    height: 1px;
+    width: 100%;
+}
+
+
+.cross:after, .cross:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.tag {
+    /* #Back End Copy: */
+    font-weight: 500;
+    opacity: 0.4;
+    font-size: 14px;
+    color: #FFFFFF;
+
+}
+
+h1 {
+    /* TochPal Operation Pl: */
+    font-weight: 100;
+    font-size: 86px;
+    line-height: 120px;
+    color: #FFFFFF;
+}
+
+h2 {
+    /* 项目总结: */
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 300;
+    line-height: 2;
+}
+
+p {
+    /* 以用户留存和满意度为目标，完成了包括键盘: */
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.content p {
+    /* 我设计并且迭代了触宝运营平台（简称TOP: */
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 16px;
+}
+
+.content img{
+    width: 83.333%
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.two {
+    vertical-align: top;
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+    padding-right: 16.666%;
+}
+
+.lines{
+    position: absolute;
+    top: 0;
+    /*left: 80px;*/
+    height: 100%;
+    width:calc(100% - 120px);
+    z-index: 0;
+    justify-content: center;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+    max-width: 1920px;
+    /*margin:0 60px;*/
+    /*margin: 0 auto;*/
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    opacity: .1;
+}
+
+.line:first-child {
+    left: 0;
+}
+
+.line:nth-child(2) {
+    left: 16.66%;
+}
+
+.line:nth-child(3) {
+    left: 33.33%;
+}
+
+.line:nth-child(4) {
+    left: 50%;
+}
+
+.line:nth-child(5) {
+    left: 66.66%;
+}
+
+.line:nth-child(6) {
+    left: 83.33%;
+}
+
+.line:nth-child(7) {
+    left: 100%;
+}
+
+.Name{
+    position: relative;
+    z-index: -1;
+    top: 1%;
+    width: 50%;
+}
+
+.Name-Site{
+    color: #fff;
+    font-size: 110px;
+    position: relative;
+    line-height: 110px;
+    font-weight: 700;
+}
+
+.about{
+    position: relative;
+    display: block;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+    z-index: 21;
+}
+
+.desc{
+    /* UX Designer Front En: */
+    opacity: 0.54;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: 100;
+}
+
+.title{
+    /* Liangkai Zhou: */
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: 200;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.btn{
+    display: inline-flex;
+    border: 1px solid;
+    padding: 10px 24px;
+    border-color: #FF7B00;
+    font-weight:200;
+    font-size: 14px;
+    color: #FF7B00;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 4px 0 #fff, 0 0 4px #fff inset;
+    border-color: #fff;
+    color: #FFFFFF;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.view_chips{
+    margin-left: 33.3%;
+    position: absolute;
+    height: 100%;
+    width: 66.78%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /*overflow: scroll;*/
+}
+
+.chips{
+    /*top: 40%;*/
+
+    position: relative;
+    width: 25%;
+    height:40%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    display: inline-block;
+    /*-webkit-animation: chipsFadein 1.6s ;*/
+    /*-o-animation: chipsFadein 1.6s ;*/
+    /*animation: chipsFadein 1.6s ;*/
+}
+
+.chips .chips_bg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+
+}
+
+.chips:hover .chips_bg{ /*当chips为hover状态时,改变chips_bg的状态*/
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.chip_title{
+    position: absolute;
+    bottom: 52px;
+    left:12px;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.chip_type{
+    position: absolute;
+    bottom: 9px;
+    left: 12px;
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 300;
+}
+
+.divider{
+    /* Rectangle 6: */
+    position: absolute;
+    bottom:38px;
+    background: #FC7B00;
+    height:2px;
+    width: 36px;
+}
+
+.stop{
+    animation-play-state: paused;
+}
+

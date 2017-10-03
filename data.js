@@ -30,7 +30,7 @@ var data = [{
   {
     "title":"Keyboard Themes",
     "tag":"Visual Design",
-    "bgUrl":"./src/img/theme.png",
+    "bgUrl":"./src/img/theme.gif",
       "content":"<h2>Coming Soon</h2>"
   },
     {
@@ -38,4 +38,9 @@ var data = [{
         "tag":"UI Design",
         "bgUrl":"./src/img/theme.png",
         "content":"<h2>Coming Soon</h2>"
-    }]
+    }];
+
+var resource = [
+  "./src/img/bg.jpg",
+  "./src/img/bibiyoyo.png"
+];
