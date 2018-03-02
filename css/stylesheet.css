@@ -151,7 +151,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("./src/img/bg.jpg");
+    background-image: url("../src/img/bg.jpg");
     background-size: cover;
     opacity: 0.24;
 }
@@ -448,19 +448,19 @@ p {
 .desc{
     /* UX Designer Front En: */
     opacity: 0.54;
-    font-size: 13px;
+    font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 0;
-    line-height: 20px;
-    font-weight: 100;
+    line-height: 24px;
+    font-weight: 300;
 }
 
 .title{
     /* Liangkai Zhou: */
-    font-size: 18px;
+    font-size: 20px;
     color: #FFFFFF;
     letter-spacing: 0;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 24px;
     padding-bottom: 10px;
 }
@@ -470,11 +470,11 @@ p {
     border: 1px solid;
     padding: 10px 24px;
     border-color: #FF7B00;
-    font-weight:200;
+    font-weight:400;
     font-size: 14px;
     color: #FF7B00;
     letter-spacing: 0;
-    line-height: 21px;
+    line-height: 24px;
     text-decoration: none;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;

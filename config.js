@@ -20,7 +20,7 @@ function createChip(posY,config, $container){
                 $('.view_detail').css({
                     "display": "block",
                     "animation": "detailView_fadeIn 0.4s forwards"
-                });
+                }) .scrollTop(0);
                 $('.content').append($content);
                 $('.main').css({
                     "animation":"mainView_fadeOut 0.4s forwards ",
