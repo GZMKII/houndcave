@@ -33,7 +33,7 @@ var data = [
     { "title":"Boom Text",
         "tag":"UX Design",
         "bgUrl":"./src/img/boomtext.gif",
-        "content":"<h2>Coming Soon</h2>"
+        "content":"<img src='./src/img/boom_text_detail.jpg'>"
     },
     {
         "title":"TouchPal Store V4",
