@@ -180,6 +180,7 @@ body {
     margin-left: 16.6666%;
     height: 100%;
     overflow: scroll;
+    text-align:center;
 }
 
 .main{
@@ -354,6 +355,11 @@ p {
 
 .content img{
     width: 83.333%
+}
+
+.content .portrait {
+    margin:0 auto;
+    width: 35%;
 }
 
 .section {

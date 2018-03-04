@@ -10,7 +10,7 @@ var data = [
     "title":"Talia AI Assistant",
     "tag":"UX Design",
     "bgUrl":"./src/img/talia_cover.gif",
-      "content":"<div></div><img src='./src/img/talia_detail.jpg'>"
+      "content":"<img src='./src/img/talia_cover.gif'> <img class='portrait' src='./src/img/ai.gif'> <img src='./src/img/talia_detail.jpg'>"
   },
   {
     "title":"Bibi&YoyoStickers",
