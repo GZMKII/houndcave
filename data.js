@@ -18,12 +18,12 @@ var data = [
     "bgUrl":"./src/img/bibiyoyo.png",
       "content":"<img src='./src/img/sticker_detail.jpg'>"
   },
-    {
-        "title":"NonElectriCity",
-        "tag":"Band Leader & Visual Design",
-        "bgUrl":"./src/img/NonElectriCity.jpg",
-        "content":"<img src='./src/img/nonelectricity_detail_1.gif'><img src='./src/img/nonelectricity_detail.jpg'>"
-    },
+  {
+    "title":"Android Wear IME",
+    "tag":"UX Design",
+    "bgUrl":"./src/img/android_watch_cover.png",
+    "content":"<img src='./src/img/android_watch_detail.png'>"
+  },
     {
         "title": "Top",
         "tag": "Web Design",
@@ -40,7 +40,12 @@ var data = [
         "tag":"UI Design",
         "bgUrl":"./src/img/v4_cover.jpg",
         "content":"<img src='./src/img/v4_detail.jpg'>"
-    }];
+    },{
+    "title":"NonElectriCity",
+    "tag":"Band Leader & Visual Design",
+    "bgUrl":"./src/img/NonElectriCity.jpg",
+    "content":"<img src='./src/img/nonelectricity_detail_1.gif'><img src='./src/img/nonelectricity_detail.jpg'>"
+  }];
 
 var resource = [
   "./src/img/bg.jpg",
