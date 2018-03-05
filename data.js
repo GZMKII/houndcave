@@ -22,7 +22,7 @@ var data = [
     "title":"Android Wear IME",
     "tag":"UX Design",
     "bgUrl":"./src/img/android_watch_cover.png",
-    "content":"<img src='./src/img/android_watch_detail.png'>"
+    "content":"<img src='./src/img/android_watch_detail.jpg'>"
   },
     {
         "title": "Top",
