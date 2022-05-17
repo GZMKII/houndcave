@@ -1,40 +1,42 @@
 var data = [
     {
-        "title":"Hades",
-        "tag":"Web Design",
-        "bgUrl":"./src/img/hades_cover.png",
-        "content":'</div></div><img src="./src/img/hades_detail.jpg">'
+        "title":"Brand Power Innovation",
+        "tag":"UX Design",
+        "bgUrl":"./src/img/ducati.gif",
+        "content":"<video controls='true' height='600'> <source src='./src/ducati.mp4' type='video/mp4'></video><br/><br/><video controls='true' height='600'> <source src='./src/arc.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
     },
-
-  {
-    "title":"Talia AI Assistant",
-    "tag":"UX Design",
-    "bgUrl":"./src/img/talia_cover.gif",
-      "content":"<img src='./src/img/talia_cover.gif'> <img class='portrait' src='./src/img/ai.gif'> <img src='./src/img/talia_detail.jpg'>"
+    {
+      "title": "Light Interaction Innovation",
+      "tag": "UX Design",
+      "bgUrl": "./src/img/redpocket.gif",
+      "content": "<video controls='true' height='800'> <source src='./src/realmoney.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/shake.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/knife.mp4' type='video/mp4'></video><br/><br/><br/><br/><br/><br/>"
   },
   {
-    "title":"Bibi&YoyoStickers",
-    "tag":"Illustration",
-    "bgUrl":"./src/img/bibiyoyo.png",
-      "content":"<img src='./src/img/sticker_detail.jpg'>"
+    "title":"Coding Project",
+    "tag":"Programming",
+    "bgUrl":"./src/img/coding.gif",
+      "content":"<video controls='true' height='600'> <source src='./src/cat.mp4' type='video/mp4'></video> <br/> <video height='800' controls='true' > <source src='./src/leapmotion.mp4' type='video/mp4'></video> <br/> <video height='800' controls='true' > <source src='./src/dynamicbrush.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
   },
+  
+  { "title":"Boom Text",
+        "tag":"UX Design",
+        "bgUrl":"./src/img/boomtext.gif",
+        "content":"<img src='./src/img/boom_text_detail.jpg'>"
+    },
   {
     "title":"Android Wear IME",
     "tag":"UX Design",
     "bgUrl":"./src/img/android_watch_cover.png",
     "content":"<img src='./src/img/android_watch_detail.jpg'>"
   },
-    {
-        "title": "Top",
-        "tag": "Web Design",
-        "bgUrl": "./src/img/top.jpg",
-        "content": '<img src="./src/img/top-detail-1.jpg">'
-    },
-    { "title":"Boom Text",
-        "tag":"UX Design",
-        "bgUrl":"./src/img/boomtext.gif",
-        "content":"<img src='./src/img/boom_text_detail.jpg'>"
-    },
+    
+  {
+    "title":"Talia AI Assistant",
+    "tag":"UX Design",
+    "bgUrl":"./src/img/talia_cover.gif",
+      "content":"<img src='./src/img/talia_cover.gif'> <img class='portrait' src='./src/img/ai.gif'> <img src='./src/img/talia_detail.jpg'>"
+  },
+    
     {
         "title":"TouchPal Store V4",
         "tag":"UI Design",

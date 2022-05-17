@@ -7,22 +7,34 @@
 
 @font-face {
     font-family: Lato-Regular;
-    src: url('src/font/LatoLatin-Regular.woff2');
+    src: url('../src/font/LatoLatin-Regular.woff2');
 }
 
 @font-face {
     font-family: Lato-Medium;
-    src: url('src/font/LatoLatin-Medium.woff2')
+    src: url('../src/font/LatoLatin-Medium.woff2')
 }
 
 @font-face {
     font-family: Lato-Light;
-    src: url('src/font/LatoLatin-Light.woff2')
+    src: url('../src/font/LatoLatin-Light.woff2')
 }
 
 @font-face {
     font-family: Lato-Thin;
-    src: url('./src/font/LatoLatin-Thin.woff2')
+    src: url('../src/font/LatoLatin-Thin.woff2')
+}
+
+@font-face {
+    font-family: Goldman-Regular;
+    src:url('../src/font/Goldman-Regular.ttf')
+
+}
+
+@font-face {
+    font-family: Goldman-Bold;
+    src:url('../src/font/Goldman-Bold.ttf')
+
 }
 
 @keyframes chipsFadein {
@@ -438,7 +450,7 @@ p {
     font-size: 110px;
     position: relative;
     line-height: 110px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .about{
