@@ -6,7 +6,7 @@ var data = [
         "content":"<video controls='true' height='600'> <source src='./src/ducati.mp4' type='video/mp4'></video><br/><br/><video controls='true' height='600'> <source src='./src/arc.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
     },
     {
-      "title": "Light Interaction Innovation",
+      "title": "Lightweight Interaction",
       "tag": "UX Design",
       "bgUrl": "./src/img/redpocket.gif",
       "content": "<video controls='true' height='800'> <source src='./src/realmoney.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/shake.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/knife.mp4' type='video/mp4'></video><br/><br/><br/><br/><br/><br/>"
