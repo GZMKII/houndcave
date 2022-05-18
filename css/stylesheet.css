@@ -447,9 +447,10 @@ p {
 
 .Name-Site{
     color: #fff;
-    font-size: 110px;
+    font-size: 130px;
     position: relative;
     line-height: 110px;
+    font-family: "Goldman-Bold";
     font-weight: 400;
 }
 
