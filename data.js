@@ -1,34 +1,37 @@
 var data = [
     {
-        "title":"Brand Power Innovation",
-        "tag":"UX Design",
-        "bgUrl":"./src/img/ducati.gif",
-        "content":"<video controls='true' height='600'> <source src='./src/ducati.mp4' type='video/mp4'></video><br/><br/><video controls='true' height='600'> <source src='./src/arc.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
+      "title":"TikTok WebApp Redesign",
+    "tag":"UX Design",
+    "bgUrl":"./src/img/WebApp.jpg",
+    "content":"<video controls='true' height='600'> <source src='./src/webapp.mp4' type='video/mp4'> </video> <img src='./src/img/webapp_2.jpg'><img src='./src/img/webapp_3.png'> <br/><br/><br/><br/>"
     },
     {
-      "title": "Lightweight Interaction",
+      "title":"Brand Power Innovation",
+    "tag":"UX Design",
+    "bgUrl":"./src/img/ducati.gif",
+    "content":"<video controls='true' height='600'> <source src='./src/ducati.mp4' type='video/mp4'></video><br/><br/><video controls='true' height='600'> <source src='./src/arc.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
+    },
+  {
+    "title": "Lightweight Interaction",
       "tag": "UX Design",
       "bgUrl": "./src/img/redpocket.gif",
       "content": "<video controls='true' height='800'> <source src='./src/realmoney.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/shake.mp4' type='video/mp4'></video> <br/><br/> <video controls='true' height='900'> <source src='./src/knife.mp4' type='video/mp4'></video><br/><br/><br/><br/><br/><br/>"
-  },
+  
+    },
+  
   {
     "title":"Coding Project",
     "tag":"Programming",
     "bgUrl":"./src/img/coding.gif",
       "content":"<video controls='true' height='600'> <source src='./src/cat.mp4' type='video/mp4'></video> <br/> <video height='800' controls='true' > <source src='./src/leapmotion.mp4' type='video/mp4'></video> <br/> <video height='800' controls='true' > <source src='./src/dynamicbrush.mp4' type='video/mp4'></video> <br/><br/><br/><br/><br/><br/>"
   },
-  
-  { "title":"Met Gala Campaign",
+  {
+    "title":"Met Gala Campaign",
         "tag":"UX Design",
         "bgUrl":"./src/img/met_gala.gif",
         "content":"<video controls='true' height='600'> <source src='./src/megala_recap.mp4' type='video/mp4'> </video> <img src='./src/img/Met_2.png'> <img src='./src/img/Met_3.png'> <img src='./src/img/Met_4.png'> <img src='./src/img/Met_5.png'><br/> <video controls='true' height='600'> <source src='./src/met_gala_interaction_direction.mov' type='video/mp4'></video> <video controls='true' height='600'> <source src='./src/met_gala_time_flower.mov' type='video/mp4'></video> <img src='./src/img/Met_8.png'> <img src='./src/img/Met_9.png'> <br/><br/><br/><br/>"
-      },
-  {
-    "title":"TikTok WebApp Redesign",
-    "tag":"UX Design",
-    "bgUrl":"./src/img/WebApp.jpg",
-    "content":"<video controls='true' height='600'> <source src='./src/webapp.mp4' type='video/mp4'> </video> <img src='./src/img/webapp_2.jpg'><img src='./src/img/webapp_3.png'> <br/><br/><br/><br/>"
-  },
+      
+    },
     
   {
     "title":"Talia AI Assistant",
